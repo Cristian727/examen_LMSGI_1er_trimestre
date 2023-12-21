@@ -2,22 +2,65 @@
 
 1º de DAM en ESCAV Granada
 
-Nombre:
+Nombre: Cristian Gonzalez Gonzalez
 
-Fecha:
+Fecha: 21/12/23
 
-## Inicio
+## Documentacion
 
-Para empezar, crea un fork de este repositorio, clónalo en tu ordenador y abre el proyecto con VSCode.
+Para la primera sección
 
-Edita este fichero README.md con tu nombre y la fecha de hoy, una vez hagas un commit inicial, estas listo para empezar!
+```html
+section{
+    width: 100%;
+    background: grey;
+    height: 100vh;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-El examen está dividido en 3 partes, cada una de ellas en una carpeta diferente:
+```
 
-- `00_teoria`: Varias preguntas de teoría.
-- `01_practica`: Ejercicio con html+js.
-- `02_docs`: Documentación del ejercicio realizado.
 
-Es importante que realizes primero la parte de teoría, aunque las partes de práctica y documentación se pueden realizar como quieras.
 
-Cada directorio tiene instrucciones en su interior, léelas con atención, y si tienes alguna duda, preguntame!
+Para la segunda sección
+
+```html
+    <section id="imagen">
+        <h1 id="titulo">Pensativa</h1>
+        <img src="https://images.unsplash.com/photo-1700575019340-5ddcc1f4f31d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDMxNTA1NDd8&ixlib=rb-4.0.3&q=85" alt="">
+        <h2 id="subtitulo">¿aprobará el examen?</h2>
+    </section>
+
+```
+
+
+Para la tercera sección he usado este código
+```html
+
+  var estado = 0;
+
+  function cambiarTexto() {
+    var parrafo = document.getElementById("miParrafo");
+
+    if (estado === 0) {
+      parrafo.innerHTML = "Has pulsado el boton";
+      estado++
+    } else if (estado === 1) {
+      parrafo.innerHTML = "Has vuelto a pulsar el boton!";
+      estado++
+    } else if (estado === 2) {
+      parrafo.style.color = "white";
+      parrafo.style.background = "black"
+      estado++
+    } else {
+        parrafo.style.color = "black"
+        parrafo.style.background = "white"
+        parrafo.innerHTML = "Pulsa el boton"
+        estado = 0
+    }
+  }
+```
